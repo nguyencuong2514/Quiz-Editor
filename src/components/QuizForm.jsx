@@ -1,36 +1,26 @@
-export default function QuizForm({ quiz, setQuiz }) {
+import React from 'react';
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setQuiz({
-      ...quiz,
-      [name]: value
-    });
+const QuizForm = ({ quiz, setQuiz }) => {
+  const handleChange = (field, value) => {
+    setQuiz({ ...quiz, [field]: value });
   };
 
   return (
-    <div>
-
-      <div>
-        <label>Quiz Name</label>
-        <input
-          type="text"
-          name="name"
-          value={quiz.name}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div>
-        <label>Description</label>
-        <textarea
-          name="description"
-          value={quiz.description}
-          onChange={handleChange}
-        />
-      </div>
-
+    <div className="quiz-info-card">
+      <input
+        type="text"
+        placeholder="Nhập tên Quiz..."
+        value={quiz.name}
+        onChange={(e) => handleChange('name', e.target.value)}
+        className="input-title"
+      />
+      <textarea
+        placeholder="Nhập mô tả bộ câu hỏi..."
+        value={quiz.description}
+        onChange={(e) => handleChange('description', e.target.value)}
+      />
     </div>
   );
-}
+};
+
+export default QuizForm;
