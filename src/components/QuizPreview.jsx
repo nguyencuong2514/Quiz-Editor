@@ -1,5 +1,5 @@
+//Hiển thị phần xem trước của quiz
 import React from 'react';
-
 const QuizPreview = ({ quiz }) => {
   return (
     <div className="preview-container">

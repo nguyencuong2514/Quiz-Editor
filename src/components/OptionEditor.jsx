@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Quản lý từng đáp án trong câu hỏi: nội dung ,giá trị,đáp án đúng và thao tác thêm sửa xóa
 const OptionEditor = ({ option, isCorrect, onUpdate, onDelete, onToggle }) => {
   return (
     <div className={`option-row ${isCorrect ? 'correct' : ''}`}>

@@ -4,7 +4,6 @@ import QuestionEditor from './components/QuestionEditor';
 import QuizPreview from './components/QuizPreview';
 import { exportToJson, importFromJson } from './utils/jsonHelper';
 import './style.css';
-
 function App() {
   const [quiz, setQuiz] = useState({ name: '', description: '', questions: [] });
   const [isPreview, setIsPreview] = useState(false);
@@ -18,7 +17,7 @@ function App() {
       } catch (err) { alert("Lỗi khi nhập file JSON!"); } 
     }
   };
-
+  // Thêm câu hỏi mới với sắp xếp tự động
   const addQuestion = () => {
     const newQuestion = {
       id: Date.now(), 

@@ -1,6 +1,8 @@
+// Quản lý từng câu hỏi:tiêu đề,mô tả và thao tác thêm sửa xóa câu hỏi
 import React from 'react';
 import OptionEditor from './OptionEditor';
 
+// Cập nhật thông tin câu hỏi và các lựa chọn đáp án
 const QuestionEditor = ({ question, onUpdate, onRemove }) => {
   const updateField = (field, value) => {
     onUpdate({ ...question, [field]: value });

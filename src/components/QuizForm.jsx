@@ -1,10 +1,10 @@
 import React from 'react';
-
+// Quản lý thông tin chung của quiz:Tên quiz và mô tả
 const QuizForm = ({ quiz, setQuiz }) => {
   const handleChange = (field, value) => {
     setQuiz({ ...quiz, [field]: value });
   };
-
+// Xử lý nhập file JSON để cập nhật quiz
   return (
     <div className="quiz-info-card">
       <input

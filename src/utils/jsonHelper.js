@@ -1,3 +1,4 @@
+// Các hàm hỗ trợ xuất nhập quiz dưới dạng JSON
 export const exportToJson = (quiz) => {
   const dataStr = JSON.stringify(quiz, null, 2);
   const blob = new Blob([dataStr], { type: "application/json" });
@@ -7,7 +8,7 @@ export const exportToJson = (quiz) => {
   link.download = "quiz.json";
   link.click();
 };
-
+// Hàm nhập quiz từ file JSON, trả về Promise để xử lý bất đồng bộ
 export const importFromJson = (file) => {
   return new Promise((resolve) => {
     const reader = new FileReader();
